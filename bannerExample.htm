@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Rotating Banners</title>
+<script language="Javascript" type="text/javascript">
+<!-- Hide from old browsers
+adImages = new Array("images/banner1-1.jpg","images/banner2-1.jpg","images/banner3-1.jpg","images/banner4-1.jpg","images/banner5-1.jpg","images/banner6-1.jpg","images/banner7-1.jpg")
+thisAd = 0
+imgCt = adImages.length
+function rotate() {
+if (document.images) {
+thisAd++
+if (thisAd == imgCt) {
+thisAd = 0
+}
+document.adBanner.src=adImages[thisAd]
+setTimeout("rotate()", 3 * 1000)
+}
+}
+// End hide script from old browsers -->
+</script>
+</head>
+<body onload="rotate()">
+<center>
+<img src="images/banner1.gif" name="adBanner" alt="Ad Banner" />
+</center>
+</body>
+</html>

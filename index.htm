@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<html lang="en" >
+    <head>
+        <title>
+            Jeff Nichols 
+        </title>    
+        <meta charset="utf-8" />
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <!-- This is where your link tag goes when linking to an external style sheet. -->
+        
+        <!--This is the format you will use when entering JavaScript -->    
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        
+        
+        
+        adImages = new Array("images/banner1-1.jpg","images/banner2-1.jpg","images/banner3-1.jpg","images/banner4-1.jpg","images/banner5-1.jpg","images/banner6-1.jpg","images/banner7-1.jpg")
+        thisAd = 0
+        imgCt = adImages.length
+        
+        function rotate() {
+            if (document.images) {
+                thisAd++
+                if (thisAd == imgCt) {
+                    thisAd = 0
+                }
+                
+            document.adBanner.src=adImages[thisAd]
+            setTimeout("rotate()", 3 * 1000)
+            }
+        }
+
+
+
+        
+        var curImage="banner1";
+        function bannerAd() {
+            if (curImage == "banner2") {
+                document.images[1].src = "images/banner1-1.jpg";
+                curImage = "banner1";
+            }
+            else {
+                document.images[1].src = "images/banner2-1.jpg";
+                curImage = "banner2";
+            }
+        }
+        /* ]]> */
+        
+        </script>    
+        
+    </head>
+        <body onload="rotate()">
+        <!--<body onload="var changeImages=setInterval('bannerAd()', 3000);">-->
+        <div id="wrapper">
+            
+        <img class="hcentered" alt="logo" height="150" width="850" src="images/conebyLogo.jpg">
+        <br><br><br><br>
+            
+        <nav class="hcentered">
+            <b>&nbsp; &nbsp; <a href="index.htm">Home</a> &nbsp; &nbsp; 
+               <a href="about.htm">Meet Rebecca</a> &nbsp; &nbsp; 
+               <a href="portfolio.htm">Portfolio</a> &nbsp;&nbsp; 
+                <a href="investment.htm">The Investment</a> &nbsp;&nbsp; 
+                <a href="blog.htm">Blog</a> &nbsp;&nbsp; 
+                <a href="faq.htm">FAQ</a> &nbsp;&nbsp; 
+                <a href="preperation.htm">Preperation</a> &nbsp;&nbsp; 
+               <a href="reservations.htm">Reservations</a></b>
+        </nav>
+        <br>
+        
+        <img class = "hcentered" name="adBanner" alt="Banner ad" height="600" width="850" src="images/banner1-1.jpg">
+        <p class="blocktext">
+            Heather is one of the most self-less people I've ever known.  Her character and effortless ability to give everything and anything she can to everyone and anyone in need constantly amazes me.  God has blessed my life with several wonderful people, and he didn't make any compromises when creating Heather and placing her in my life.  We met a few years back and didn't really becomes friends until about a year and a half later.  I'm not sure why it took us so long to realize we were perfect for each other... We're complete opposites in a lot of  ways, but that's what makes us fit together so well!  
+            The photos below are from a mixture of shoots we've done together.  Before she moved out of the Austin area we would plan a shoot for every couple of weeks to grow both of our portfolio's.  I hope you enjoy the art we created together, we sure did and do!
+            The last few photos are of Heather and her step-father, Mark.  Mark has played a huge role in Heather's life and I know she has an amazing amount of love and respect for him.  A few month's ago Mark became very sick.  To this day he's battling his sickness and is in need of prayers.  If you believe in the power of prayer please join me in uplifting Mark, Laurie (Heather's mom and Mark's wife) and Heather these next few months while Mark tries to win his battle.
+            <br><br>Come on in for some down home service and say hello!
+        </p>
+        <br>
+
+        
+        <!-- external javascript for validation -->  
+        <script type="text/javascript" src="validation.js">
+        </script>    
+        
+        </div>
+    </body>
+</html>
